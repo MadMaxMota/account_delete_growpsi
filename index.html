@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Como excluir minha conta</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 20px;
-    background: #f9f9f9;
-    color: #333;
-  }
-  h1 {
-    color: #008c8c;
-    text-align: center;
-  }
-  ol {
-    background: #fff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #ccc;
-  }
-  li {
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-  img {
-    display: block;
-    max-width: 100%;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #aaa;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como excluir minha conta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f4f7f9;
+      color: #333;
+    }
+    h1 {
+      color: #008c8c;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    p.intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    ol {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    ol li {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+    .image-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .image-row img {
+      width: calc(50% - 10px);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform .2s;
+    }
+    .image-row img:hover {
+      transform: scale(1.03);
+    }
+    @media (max-width: 500px) {
+      .image-row img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <h1>Como excluir minha conta</h1>
-  <p>Siga os passos abaixo para excluir sua conta no aplicativo:</p>
+  <p class="intro">
+    Siga os passos abaixo para excluir sua conta no aplicativo:
+  </p>
+
   <ol>
     <li>Acesse o menu do app</li>
     <li>Vá até <strong>Configurações &gt; Conta</strong></li>
     <li>Toque em <strong>Excluir conta</strong></li>
   </ol>
-  <img src="imagens/first_path.jpeg" alt="Passo 1" />
-  <img src="imagens/second_path.jpeg" alt="Passo 2" />
+
+  <div class="image-row">
+    <img src="imagens/first_path.jpeg" alt="Passo 1">
+    <img src="imagens/second_path.jpeg" alt="Passo 2">
+  </div>
 </body>
 </html>
