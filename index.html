@@ -1,88 +1,368 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Como excluir minha conta</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #f4f7f9;
-      color: #333;
-    }
-    h1 {
-      color: #008c8c;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    p.intro {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 18px;
-      line-height: 1.4;
-    }
-    ol {
-      background: #fff;
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-    ol li {
-      margin-bottom: 15px;
-      font-size: 17px;
-    }
-    .image-row {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-    .image-row img {
-      width: calc(50% - 10px);
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform .2s;
-    }
-    .image-row img:hover {
-      transform: scale(1.03);
-    }
-    @media (max-width: 500px) {
-      .image-row img {
-        width: 100%;
-      }
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Conta - Growpsi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a2a6c 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .logo i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .warning-box {
+            background: #fff8f8;
+            border-left: 5px solid #e74c3c;
+            padding: 25px;
+            margin: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box h2 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-box h2 i {
+            margin-right: 10px;
+        }
+        
+        .warning-box p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .method-section {
+            padding: 0 30px 30px;
+        }
+        
+        .section-title {
+            color: #1a2a6c;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f2f5;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+        }
+        
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: #1a2a6c;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content h3 {
+            color: #2a5298;
+            margin-bottom: 8px;
+        }
+        
+        .step-content p {
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .alternative-method {
+            background: #f0f7ff;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        
+        .alternative-method h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alternative-method h3 i {
+            margin-right: 10px;
+        }
+        
+        .alternative-method p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #1a2a6c, #2a5298);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(26, 42, 108, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(26, 42, 108, 0.3);
+        }
+        
+        .btn i {
+            margin-left: 8px;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(to right, #e74c3c, #ff655b);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.2);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .request-section {
+            background: #f9f9f9;
+            padding: 40px 30px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .request-section h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+        
+        .request-section p {
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+        }
+        
+        .additional-info {
+            padding: 30px;
+            background: #f8fafb;
+            border-top: 1px solid #eee;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+        }
+        
+        .info-item h3 {
+            color: #1a2a6c;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-item h3 i {
+            margin-right: 10px;
+            color: #e74c3c;
+        }
+        
+        .info-item p {
+            color: #555;
+            padding-left: 30px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            font-size: 0.9rem;
+            background: #f5f7fa;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 600px) {
+            header {
+                padding: 30px 15px;
+            }
+            
+            .warning-box, .method-section {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .step-number {
+                margin-right: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Como excluir minha conta</h1>
-  <p class="intro">
-    Siga os passos abaixo para excluir sua conta no aplicativo.
-  </p>
-
-  <ol>
-    <li>Abra o menu de perfil</li>
-    <li>Toque em <strong>Controle da conta</strong></li>
-    <li>Selecione <strong>Deletar Conta</strong></li>
-  </ol>
-
-  <div class="image-row">
-    <img src="imagens/controle_conta.png" alt="Tela Controle da Conta">
-    <img src="imagens/deletar_conta.png" alt="Opção Deletar Conta">
-  </div>
-
-  <footer>
-    &copy; 2025 Growpsi – Aplicativo de Psicologia
-  </footer>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-seedling"></i> Growpsi
+            </div>
+            <h1>Excluir sua Conta</h1>
+            <p>Guia completo para remover permanentemente sua conta do aplicativo</p>
+        </header>
+        
+        <div class="warning-box">
+            <h2><i class="fas fa-exclamation-triangle"></i> Exclusão Permanente</h2>
+            <p>Ao excluir sua conta, todos os seus dados, histórico e informações associadas serão removidos permanentemente do nosso sistema. Esta ação não pode ser desfeita.</p>
+        </div>
+        
+        <div class="method-section">
+            <h2 class="section-title"><i class="fas fa-mobile-alt"></i> Como excluir pelo aplicativo</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Entre no app Growpsi</h3>
+                        <p>Abra o aplicativo no seu dispositivo móvel e faça login na sua conta.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Toque no ícone do perfil</h3>
+                        <p>Localizado no canto superior direito da tela principal.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Acesse "Controle da Conta"</h3>
+                        <p>Na tela do seu perfil, selecione esta opção no menu de configurações.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Selecione "Deletar conta"</h3>
+                        <p>Confirme sua escolha quando solicitado para concluir a exclusão.</p>
+                    </div>
+                </div>
+            </div>        
+        </div> <!-- Fechamento correto da div method-section -->
+        
+        <div class="method-section">
+            <div class="alternative-method">
+                <h3><i class="fas fa-laptop"></i> Método Alternativo</h3>
+                <p>Se você não consegue acessar o aplicativo, pode solicitar a exclusão da sua conta por email.</p>
+                <a href="mailto:contato@growpsi.com" class="btn">
+                    Solicitar por Email <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="request-section">
+            <h2>Precisa de ajuda?</h2>
+            <p>Se você está tendo problemas para excluir sua conta ou tem dúvidas sobre o processo, nossa equipe de suporte está pronta para ajudar.</p>
+            <a href="mailto:suporte@growpsi.com" class="btn btn-secondary">
+                Contatar Suporte <i class="fas fa-headset"></i>
+            </a>
+        </div>
+        
+        <div class="additional-info">
+            <div class="info-item">
+                <h3><i class="fas fa-info-circle"></i> O que acontece quando excluo minha conta?</h3>
+                <p>Todos os seus dados pessoais, histórico de atividades, configurações e informações associadas à sua conta serão permanentemente removidos de nossos servidores.</p>
+            </div>
+            
+            <div class="info-item">
+                <h3><i class="fas fa-history"></i> Quanto tempo leva para a conta ser excluída?</h3>
+                <p>O processo de exclusão é iniciado imediatamente após a confirmação. Todos os dados serão completamente removidos em até 72 horas.</p>
+            </div>
+            
+            <div class="info-item">
+                <h3><i class="fas fa-ban"></i> Posso recuperar minha conta depois de excluir?</h3>
+                <p>Não, a exclusão da conta é permanente e irreversível. Você precisará criar uma nova conta se desejar usar nossos serviços novamente.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Growpsi. Dúvidas? contato@growpsi.com</p>
+            <p style="margin-top: 10px;">Esta página contém apenas informações sobre exclusão de conta</p>
+        </footer>
+    </div>
 </body>
 </html>
