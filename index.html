@@ -31,6 +31,7 @@
             background: white;
             min-height: 100vh;
             position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
         }
         
         header {
@@ -48,12 +49,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #1a2a6c;
-        }
-        
-        .logo i {
-            color: #4CAF50;
-            margin-right: 8px;
+            color: #008C8C;
         }
         
         header h1 {
@@ -111,7 +107,7 @@
         }
         
         .step-number {
-            background: #1a2a6c;
+            background: #008C8C;
             color: white;
             width: 30px;
             height: 30px;
@@ -149,7 +145,7 @@
         }
         
         .alternative-section h3 {
-            color: #1a2a6c;
+            color: #008C8C;
             margin-bottom: 15px;
             font-size: 1.1rem;
             display: flex;
@@ -158,6 +154,7 @@
         
         .alternative-section h3 i {
             margin-right: 10px;
+            color: #008C8C;
         }
         
         .alternative-section p {
@@ -169,7 +166,7 @@
         
         .btn {
             display: inline-block;
-            background: #1a2a6c;
+            background: #008C8C;
             color: white;
             padding: 14px 25px;
             border-radius: 25px;
@@ -185,7 +182,9 @@
         }
         
         .btn:hover {
-            background: #2a5298;
+            background: #007070;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 140, 140, 0.25);
         }
         
         .btn-secondary {
@@ -196,6 +195,7 @@
         
         .btn-secondary:hover {
             background: #f8f8f8;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.15);
         }
         
         .login-help {
@@ -213,7 +213,7 @@
         }
         
         .login-help a {
-            color: #1a2a6c;
+            color: #008C8C;
             text-decoration: none;
             font-weight: 500;
         }
@@ -244,7 +244,7 @@
         
         .info-item h3 i {
             margin-right: 10px;
-            color: #e74c3c;
+            color: #008C8C;
         }
         
         .info-item p {
@@ -271,13 +271,25 @@
             margin: 0 20px 20px;
             text-align: center;
             text-decoration: none;
-            color: #1a2a6c;
+            color: #008C8C;
             font-weight: 500;
             border: 1px solid #e0e0e0;
+            transition: all 0.2s;
         }
         
         .app-link:hover {
             background: #f0f2f5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 140, 140, 0.15);
+        }
+        
+        .app-link i {
+            margin-right: 8px;
+        }
+        
+        .highlight {
+            color: #008C8C;
+            font-weight: 600;
         }
         
         @media (max-width: 500px) {
@@ -298,14 +310,12 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <i class="fas fa-seedling"></i> Growpsi
-            </div>
+            <div class="logo">Growpsi</div>
             <h1>Excluir sua Conta</h1>
         </header>
         
         <div class="warning-box">
-            <p><strong>Atenção:</strong> Quando você excluir sua conta, seu perfil do Growpsi não ficará mais visível e seus dados serão excluídos conforme estabelecido na nossa <a href="#" style="color: #1a2a6c; font-weight:500;">Política de Privacidade</a>.</p>
+            <p><strong>Atenção:</strong> Quando você excluir sua conta, seu perfil do Growpsi não ficará mais visível e seus dados serão excluídos conforme estabelecido na nossa <a href="#" class="highlight">Política de Privacidade</a>.</p>
             <p>Se preferir dar um tempo em vez de excluir sua conta, você pode <strong>ocultar seu perfil</strong> temporariamente.</p>
         </div>
         
@@ -314,7 +324,7 @@
         </a>
         
         <div class="login-help">
-            <p>Se estiver tendo problemas para fazer login, <a href="#">leia este artigo</a>.</p>
+            <p>Se estiver tendo problemas para fazer login, <a href="#" class="highlight">leia este artigo</a>.</p>
         </div>
         
         <div class="method-section">
@@ -381,7 +391,7 @@
         </div>
         
         <footer>
-            <p>© 2023 Growpsi. Dúvidas? <a href="mailto:contato@growpsi.com" style="color: #1a2a6c;">contato@growpsi.com</a></p>
+            <p>© 2023 Growpsi. Dúvidas? <a href="mailto:contato@growpsi.com" class="highlight">contato@growpsi.com</a></p>
             <p style="margin-top: 10px; font-size: 0.8rem;">Esta página contém apenas informações sobre exclusão de conta</p>
         </footer>
     </div>
